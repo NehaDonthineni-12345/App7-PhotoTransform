@@ -149,14 +149,15 @@ then load new image (var img + img.onload)*/
       <div id="messageDisplayArea"></div>
       
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-     <canvas2 id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas2>
       <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext("2d");
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
+       
        /* second canvas */
+       <canvas2 id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas2>
         var canvas2 = document.createElement('canvas2');
            canvas2.width = 1;
            canvas2.height = ih;
