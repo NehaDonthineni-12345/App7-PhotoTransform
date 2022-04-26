@@ -100,6 +100,20 @@
           /*  +++++++++++++++ BEGIN IMAGE PROCESSING +++++++++++++++ */
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+         /* - create new canvas id (var canvas2)
+- create new context id (var ctx2)
+- original identifying text on new canvas 
+ var iw = img.naturalWidth, ih = img.naturalHeight;
+  var canvas = document.createElement('canvas');
+  canvas.width = 1;
+  canvas.height = ih;
+  var ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+  var data = ctx.getImageData(0, 0, 1, ih).data;
+for loop to load brightness + get the blue intensity
+then need to overwrite original image in second canvas
+then load new image (var img + img.onload)*/
+         
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
           
@@ -135,12 +149,19 @@
       <div id="messageDisplayArea"></div>
       
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+     <canvas2 id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas2>
+      <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext("2d");
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
+       /* second canvas */
+       var canvas2 = document.getElementById('myCanvas2');
+       var context2 = canvas2.getContext("2d");
+          context.font = '20pt Calibri';
+          context.fillStyle = "black";
+          context.fillText("Blue intensity image will go here"; 10,20);
       </script>
 
     </div><!-- /content -->
