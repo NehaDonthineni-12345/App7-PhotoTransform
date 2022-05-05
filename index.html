@@ -100,12 +100,12 @@
           /*  +++++++++++++++ BEGIN IMAGE PROCESSING +++++++++++++++ */
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-        
+  <!--      
   ctx.drawImage(img, 0, 0);
   var data = ctx.getImageData(0, 0, 1, ih).data;
 for loop to load brightness + get the blue intensity
 then need to overwrite original image in second canvas
-then load new image (var img + img.onload)*/
+then load new image (var img + img.onload)*/ -->
          
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
@@ -171,7 +171,7 @@ then load new image (var img + img.onload)*/
           data[i + 1] = brightness;
           <!-- blue -->
           data[i + 2] = brightness;
-        }
+       
 
         // overwrite original image
         context2.putImageData(imageData, 1, ih);
