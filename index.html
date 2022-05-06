@@ -103,8 +103,8 @@
          var imageData = context.getImageData(0,0,600,500); //image context
          var data = imageData.data; //get pixel data of canvas
          
-         for(var i = 0; n = data.length; i < n; i += 4) {
-           data [i] = 0; //set red intensity to 0
+         for(var i = 0, n = data.length; i < n; i += 4) {
+           data[i] = 0; //set red intensity to 0
            data[i+1] = 0; //set green intensity to 0
          }
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
